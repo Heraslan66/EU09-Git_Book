@@ -1,0 +1,93 @@
+1- ‘git config’
+‘git config’; kullanıcı adı, mail, dosya formatları gibi genel yapılandırma ayarlarını yapacağınız komuttur.
+
+$ git config --global user.name "Kod5"
+
+$ git config --global user.email yazar@kod5.net
+1
+2
+3
+$ git config --global user.name "Kod5"
+
+$ git config --global user.email yazar@kod5.net
+Yukarıdaki komutları girdiğinizde bütün Git projelerinizde bu kullanıcı adı ve mail adresi kullanılır.
+
+2- ‘git init’
+git
+Bu komut, bulunduğunuz dizini bir Git repository‘si haline getirir ve .git adında bir dizin oluşturur. Daha sonra bu repository‘yi uzaktaki bir sunucuya gönderebilirsiniz.
+
+Örneğin, kök dizinde MyProject diye bir proje klasörü oluşturalım. Daha sonrada bu dizinde bir Git repository‘si oluşturalım. Aşağıdaki komutları sırasıyla girdiğinizde konsola 4. satırdaki gibi bir açıklama basılacaktır. “Belirtilen dizinde boş bir Git repository‘si oluşturuldu.” şeklinde.
+
+mkdir MyProject
+cd MyProject
+git init
+Initialized empty Git repository in /Users/YAZAR/MyProject/.git/
+1
+2
+3
+4
+mkdir MyProject
+cd MyProject
+git init
+Initialized empty Git repository in /Users/YAZAR/MyProject/.git/
+3- ‘git clone’
+Bu komutla local’de ya da uzak bir sunucuda yer alan bir repository’nin çalışan kopyasını bulunduğunuz dizine kopyalar.
+
+git clone /path/to/repository
+
+git clone username@host:/path/to/repository
+1
+2
+3
+git clone /path/to/repository
+
+git clone username@host:/path/to/repository
+Yukarıdaki ilk satır bilgisayarınızda var olan bir repository‘yi, ikinci satır ise uzak bir sunucudaki repository‘yi bulunduğunuz dizine kopyalar.
+
+4- ‘git add’
+Belirttiğiniz bir dosyayı ya da tüm projeyi çalışma dizinine(Index) ekler. Yani commit‘lenmeye hazır hale getirir.
+
+git add Readme.txt
+
+git add *
+1
+2
+3
+git add Readme.txt
+
+git add *
+git-logoİlk satır ile, ‘Readme.txt‘ isimli dosyayı; ikinci satır ile de proje içerisindeki tüm dosyaları çalışma dizinine eklemiş oluyoruz.
+
+5- ‘git rm’
+Belirttiğiniz bir dosyayı çalışma dizininden siler.
+
+git rm Readme.txt
+1
+git rm Readme.txt
+6- ‘git commit’
+Çalışma dizinine eklenen dosyaları head denilen .git klasörü içindeki kısıma ekler. Commit işlemi yerelde gerçekleşen bir işlemdir. Uzak sunucudaki repository‘de bir değişiklik yapmaz.
+
+git commit -m "Projede X işlemi yapıldı."
+1
+git commit -m "Projede X işlemi yapıldı."
+Tırnak içerisinde yazan kısım commit mesajıdır ve bu alanı boş bırakmamanız gerekir. Buraya hangi kısımlarda değişiklik yaptığınızı yazmanız daha sonrası için size kolaylık olacaktır.
+
+7- ‘git push’
+Commit‘lenmiş değişiklikleri uzak sunucudaki repository‘ye göndermenizi sağlayan komuttur.
+
+git push origin master
+1
+git push origin master
+8- ‘git status’
+Repository‘nizin o anki durumu hakkında size bilgi verir. Değişiklik yapılmış veya yeni eklenmiş fakat add ya da commit işlemi uygulanmamış dosyalar varsa bunları liste halinde size gösterir.
+
+git status
+1
+git status
+9- ‘git pull’
+Uzak sunucudaki repository‘de değişikliğe uğramış ya da yeni eklenmiş dosyalar varsa bunları indirir ve yereldeki repository ile birleştirir.
+
+[alert]Merge, branch, checkout gibi temel diğer komutları ayrı başlıklar altında ele alacağım için buraya almadım. ;)[/alert]
+Başlıca Git komutlarını sizlerle paylaşmaya çalıştım. Umarım fayadalı olmuştur.
+
+Atladığım komutlar varsa, bunları benimle paylaşırsanız yazıma eklemekten memnuniyet duyarım. Hayat paylaştıkça güzeldir. 🙂
